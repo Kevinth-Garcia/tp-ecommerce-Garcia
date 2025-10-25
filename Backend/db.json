@@ -1,0 +1,85 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "category": "ropa",
+      "name": "Camiseta Gamer",
+      "description": "Camiseta con diseño retro de videojuegos, 100% algodón.",
+      "price": 25,
+      "image": "https://m.media-amazon.com/images/I/B1pppR4gVKL._CLa%7C2140%2C2000%7C91vRrk76FAL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_SX679_.png"
+    },
+    {
+      "id": 2,
+      "category": "ropa",
+      "name": "Sudadera Zelda",
+      "description": "Sudadera con capucha, logo Tri-fuerza.",
+      "price": 35,
+      "image": "https://m.media-amazon.com/images/I/619x3LpKq7S._AC_SX679_.jpg"
+    },
+    {
+      "id": 3,
+      "category": "ropa",
+      "name": "Chaqueta Techwear",
+      "description": "Sudadera con capucha, logo Fantasma corta viento.",
+      "price": 45,
+      "image": "https://m.media-amazon.com/images/I/71mq1w7TtQL._AC_SX679_.jpg"
+    },
+    {
+      "id": 4,
+      "category": "ropa",
+      "name": "Calcetines Naruto",
+      "description": "Diseños personalizados: los cinco diseños inspirados en diferentes personajes de Naruto hacen de este conjunto de calcetines un imprescindible para los fanáticos de todo el mundo",
+      "price": 45,
+      "image": "https://m.media-amazon.com/images/I/816+4HSabOL._AC_SX679_.jpg"
+    },
+    {
+      "id": 5,
+      "category": "ropa",
+      "name": "Bolso Dragon Ball",
+      "description": "Bolso de GYM con diseño Dragon Ball Z",
+      "price": 70,
+      "image": "https://m.media-amazon.com/images/I/91-2VS7svWL._AC_SL1500_.jpg"
+    },
+    {
+      "id": 6,
+      "category": "juegos",
+      "name": "PC Gamer Gama Alta",
+      "description": "Ryzen 7 9800X3D 4.7 GHz (5.2 GHz), AMD RX 9070XT 16GB, 2TB Gen4 NVMe SSD, 32GB DDR5 RAM 6000 RGB, 850W Gold ATX 3 PSU, ARGB AIO de 14.173 in, Wi-Fi, Win 11",
+      "price": 2200,
+      "image": "https://m.media-amazon.com/images/I/817LKl26dXL._AC_SL1500_.jpg"
+    },
+    {
+      "id": 7,
+      "category": "juegos",
+      "name": "Battlefield 6",
+      "description": "Battlefiel 6 para Sony PlayStation 5",
+      "price": 45,
+      "image": "https://m.media-amazon.com/images/I/81ylKI9bnJL._SL1500_.jpg"
+    },
+    {
+      "id": 8,
+      "category": "juegos",
+      "name": "PS5 PRO",
+      "description": "PlayStation Superresolución espectral (PSSR) Obtenga una claridad de imagen súper nítida en su televisor 4K utilizando la resolución mejorada de IA para un juego de ultra alta definición con detalles asombrosos.",
+      "price": 750,
+      "image": "https://m.media-amazon.com/images/I/61vR3ovb2UL._SL1500_.jpg"
+    },
+    {
+      "id": 9,
+      "category": "juegos",
+      "name": "Call Of Duty Black Ops 7",
+      "description": "Treyarch y Raven Software están trayendo a los jugadores las Black Ops más alucinantes de la historia.",
+      "price": 45,
+      "image": "https://m.media-amazon.com/images/I/81mwBa-kziL._SL1500_.jpg"
+    },
+    {
+      "id": 10,
+      "category": "juegos",
+      "name": "Pokemon Legends Z-A",
+      "description": "Vive como entrenador Pokémon y ayuda a proteger la paz en Lumiose City, mejorado para el sistema Nintendo Switch 2.",
+      "price": 59.99,
+      "image": "https://m.media-amazon.com/images/I/81JAV3LFOjL._SL1500_.jpg"
+    }
+  ],
+  "orders": []
+}
