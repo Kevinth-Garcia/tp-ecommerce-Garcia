@@ -28,7 +28,7 @@
       "id": 4,
       "category": "ropa",
       "name": "Calcetines Naruto",
-      "description": "Diseños personalizados: los cinco diseños inspirados en diferentes personajes de Naruto hacen de este conjunto de calcetines un imprescindible para los fanáticos de todo el mundo",
+      "description": "Diseños personalizados: los cinco diseños inspirados en diferentes personajes de Naruto ",
       "price": 45,
       "image": "https://m.media-amazon.com/images/I/816+4HSabOL._AC_SX679_.jpg"
     },
@@ -81,5 +81,107 @@
       "image": "https://m.media-amazon.com/images/I/81JAV3LFOjL._SL1500_.jpg"
     }
   ],
-  "orders": []
+  "orders": [
+    {
+      "items": [
+        {
+          "id": 2,
+          "name": "Sudadera Zelda",
+          "price": 35,
+          "image": "https://m.media-amazon.com/images/I/619x3LpKq7S._AC_SX679_.jpg",
+          "quantity": 4
+        }
+      ],
+      "total": 140,
+      "customer": {
+        "name": "jonh doe",
+        "email": "johndoe@gmail.com",
+        "phone": "7895555555"
+      },
+      "date": "2025-10-26T22:43:38.153Z",
+      "id": 1
+    },
+    {
+      "items": [
+        {
+          "id": 1,
+          "name": "Camiseta Gamer",
+          "price": 25,
+          "image": "https://m.media-amazon.com/images/I/B1pppR4gVKL._CLa%7C2140%2C2000%7C91vRrk76FAL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_SX679_.png",
+          "quantity": 1
+        },
+        {
+          "id": 2,
+          "name": "Sudadera Zelda",
+          "price": 35,
+          "image": "https://m.media-amazon.com/images/I/619x3LpKq7S._AC_SX679_.jpg",
+          "quantity": 1
+        },
+        {
+          "id": 3,
+          "name": "Chaqueta Techwear",
+          "price": 45,
+          "image": "https://m.media-amazon.com/images/I/71mq1w7TtQL._AC_SX679_.jpg",
+          "quantity": 1
+        },
+        {
+          "id": 4,
+          "name": "Calcetines Naruto",
+          "price": 45,
+          "image": "https://m.media-amazon.com/images/I/816+4HSabOL._AC_SX679_.jpg",
+          "quantity": 1
+        },
+        {
+          "id": 5,
+          "name": "Bolso Dragon Ball",
+          "price": 70,
+          "image": "https://m.media-amazon.com/images/I/91-2VS7svWL._AC_SL1500_.jpg",
+          "quantity": 1
+        },
+        {
+          "id": 6,
+          "name": "PC Gamer Gama Alta",
+          "price": 2200,
+          "image": "https://m.media-amazon.com/images/I/817LKl26dXL._AC_SL1500_.jpg",
+          "quantity": 1
+        },
+        {
+          "id": 7,
+          "name": "Battlefield 6",
+          "price": 45,
+          "image": "https://m.media-amazon.com/images/I/81ylKI9bnJL._SL1500_.jpg",
+          "quantity": 1
+        },
+        {
+          "id": 8,
+          "name": "PS5 PRO",
+          "price": 750,
+          "image": "https://m.media-amazon.com/images/I/61vR3ovb2UL._SL1500_.jpg",
+          "quantity": 1
+        },
+        {
+          "id": 9,
+          "name": "Call Of Duty Black Ops 7",
+          "price": 45,
+          "image": "https://m.media-amazon.com/images/I/81mwBa-kziL._SL1500_.jpg",
+          "quantity": 1
+        },
+        {
+          "id": 10,
+          "name": "Pokemon Legends Z-A",
+          "price": 59.99,
+          "image": "https://m.media-amazon.com/images/I/81JAV3LFOjL._SL1500_.jpg",
+          "quantity": 1
+        }
+      ],
+      "total": 3319.99,
+      "customer": {
+        "name": "jonh doe",
+        "email": "johndoe@gmail.com",
+        "phone": "7895555555"
+      },
+      "date": "2025-10-26T23:09:00.755Z",
+      "id": 2
+    }
+  ]
 }

@@ -1,33 +1,41 @@
-
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";//manejo del estado local//
+import { fetchProducts } from "../Service/Api"; //importo la Api para que nos muestre el catalogo de items//
+import  ProductCard  from "../components/ProductCard";//se importa el ProductCard para que muestre el item//
 
 export default function Products() {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [products, setProducts] = useState([]);//guarda los datos del backend//
+  const [loading, setLoading] = useState(true);//controla los datos si se estan cargando//
+  const [error, setError] = useState(null);//guarda el mensaje de error por si falla//
 
-  useEffect(() => {
-    fetch("http://localhost:3001/products") // Server JSON
-      .then((res) => res.json())
-      .then((data) => {
-        setProducts(data);
-        setLoading(false);
-      })
-      .catch((err) => console.error("Error al cargar productos:", err));
+  useEffect(() => {//para llamar a la Api para hacer una peticion, exito guarda los datos, mensaje de error por si falla,desactiva el estado de carga para que no se congele la app//
+    fetchProducts()
+      .then((d) => setProducts(d))
+      .catch((e) => setError(e.message))
+      .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <p>Cargando productos...</p>;
+  if (loading) return <p className="cargando-datos">Cargando...</p>;//condicional para ver si se cargan los datos//
+  if (error) return <p className="error-datos">Error: {error}</p>;//condicional para que de mensaje de error por si falla la carga//
+
+  const ropa = products.filter((p) => p.category === "ropa");//catalogo de ropa//
+  const juegos = products.filter((p) => p.category === "juegos");//catalogo de juegos//
+
+  const section = (title, arr) => (//ordenar la secciones de acuerdo a su categoria con scroll lateral//
+    <section className="category">
+      <h2>{title}</h2>
+      <div className="scroll-container">
+        {arr.map((p) => (
+          <ProductCard key={p.id} product={p} />
+        ))}
+      </div>
+    </section>
+  );
 
   return (
-    <div className="product-grid">
-      {products.map((p) => (
-        <div key={p.id} className="product-card">
-          <img src={p.image} alt={p.name} />
-          <h3>{p.name}</h3>
-          <p>{p.description}</p>
-          <span>${p.price}</span>
-          <button>Agregar al carrito</button>
-        </div>
-      ))}
+    <div className="products-page">
+      <h1>Catálogo</h1>
+      {section("Ropa", ropa)}
+      {section("Juegos", juegos)}
     </div>
   );
 }

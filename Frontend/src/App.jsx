@@ -1,29 +1,35 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/header";
 import Footer from "./components/Footer";
+import CartDrawer from "./components/CartDrawer";
 
 import Home from "./pages/Home";
 import Products from "./pages/Products";
-import About from "./pages/Nosotros";
-import Cart from "./pages/Cart";
+import ProductDetail from "./pages/ProductDetail";
+import About from "./pages/About";
+import Checkout from "./pages/Checkout";
 import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <Header />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/about" element={<About />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
+
+      {/* Drawer montado siempre, controlado por Zustand */}
+      <CartDrawer />
+
       <Footer />
-    </BrowserRouter>
+    </>
   );
 }
-
 export default App;
