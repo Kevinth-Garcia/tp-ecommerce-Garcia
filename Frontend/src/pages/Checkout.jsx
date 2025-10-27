@@ -1,15 +1,16 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";//navegacion para que si no hay items vuelva a products y no deje comprar, si se realiza exitosamente la compra se volvera a la pagina de inicio//
-import { useCartStore } from "../store/useCartStore";// importo el js del uso del carrito para tomar en cuenta los items que se encuentran en el carro//
-import { createOrder } from "../Service/Api";// importo la Api para tomar las ordenes que se mandan desde el carro para hacer el checkout//
+import { useNavigate } from "react-router-dom"; //navegacion para que si no hay items vuelva a products y no deje comprar, si se realiza exitosamente la compra se volvera a la pagina de inicio//
+import { useCartStore } from "../store/useCartStore"; // importo el js del uso del carrito para tomar en cuenta los items que se encuentran en el carro//
+import { createOrder } from "../Service/Api"; // importo la Api para tomar las ordenes que se mandan desde el carro para hacer el checkout//
 
 export default function Checkout() {
-  const navigate = useNavigate();// para que pueda redirigir al home y productos//
-  const items = useCartStore((s) => s.items);//items que se encuentran en el carro//
-  const getTotalPrice = useCartStore((s) => s.getTotalPrice);//precio total de todo los items//
-  const clearCart = useCartStore((s) => s.clearCart);//limpieza de carro si no quieres comprar los items del carro//
+  const navigate = useNavigate(); // para que pueda redirigir al home y productos//
+  const items = useCartStore((s) => s.items); //items que se encuentran en el carro//
+  const getTotalPrice = useCartStore((s) => s.getTotalPrice); //precio total de todo los items//
+  const clearCart = useCartStore((s) => s.clearCart); //limpieza de carro si no quieres comprar los items del carro//
 
-  const [formData, setFormData] = useState({//formulario que se debe llenar para concretar la orden//
+  const [formData, setFormData] = useState({
+    //formulario que se debe llenar para concretar la orden//
     name: "",
     email: "",
     phone: "",
@@ -22,13 +23,15 @@ export default function Checkout() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (items.length === 0) {//condicional que revisa si hay o no items en el carro//
+    if (items.length === 0) {
+      //condicional que revisa si hay o no items en el carro//
       alert("Tu carrito está vacío.");
       navigate("/products");
       return;
     }
 
-    try {//constante que tomara los datos del comprador con sus items//
+    try {
+      //constante que tomara los datos del comprador con sus items//
       const orderData = {
         items,
         total: getTotalPrice(),
@@ -39,14 +42,15 @@ export default function Checkout() {
       await createOrder(orderData);
       alert("✅ Compra confirmada con éxito! Muchas gracias por su compra");
       clearCart();
-      navigate("/");//una vez que la compra ha sido exitosa aparecera un mesaje de confirmacion y agradecimiento//
+      navigate("/"); //una vez que la compra ha sido exitosa aparecera un mesaje de confirmacion y agradecimiento//
     } catch (error) {
-      console.error("Error creando la orden:", error);//si el fetch falla la orden no se mandara y no se realizara la compra dando un mensaje de fallo//
+      console.error("Error creando la orden:", error); //si el fetch falla la orden no se mandara y no se realizara la compra dando un mensaje de fallo//
       alert("❌ Ocurrió un error al confirmar la compra.");
     }
   };
 
-  return (//resumen de todos los items que se tienen junto con el formulario a llenar para completar la compra//
+  return (
+    //resumen de todos los items que se tienen junto con el formulario a llenar para completar la compra//
     <div className="checkout-page">
       <h2>Confirmación de compra</h2>
 

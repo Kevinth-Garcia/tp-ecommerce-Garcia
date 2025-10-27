@@ -3,11 +3,13 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
 export const useCartStore = create(
-  persist(//se crea la constante para que guarde el estado de zustand en el almacenamiento local//
+  persist(
+    //se crea la constante para que guarde el estado de zustand en el almacenamiento local//
     (set, get) => ({
       items: [],
 
-      addToCart: (product) => {//agregar productos al carro en base a id//
+      addToCart: (product) => {
+        //agregar productos al carro en base a id//
         const items = get().items.slice();
         const idx = items.findIndex((i) => i.id === product.id);
         if (idx >= 0) {
@@ -21,11 +23,13 @@ export const useCartStore = create(
         set({ items });
       },
 
-      removeFromCart: (id) => {//remover productos del carro
+      removeFromCart: (id) => {
+        //remover productos del carro
         set({ items: get().items.filter((i) => i.id !== id) });
       },
 
-      increment: (id) => {//aumentar la cantidad de productos//
+      increment: (id) => {
+        //aumentar la cantidad de productos//
         set({
           items: get().items.map((i) =>
             i.id === id ? { ...i, quantity: (i.quantity || 1) + 1 } : i
@@ -33,7 +37,8 @@ export const useCartStore = create(
         });
       },
 
-      decrement: (id) => {//disminuir la cantidad de productos//
+      decrement: (id) => {
+        //disminuir la cantidad de productos//
         set({
           items: get()
             .items.map((i) =>
@@ -43,7 +48,7 @@ export const useCartStore = create(
         });
       },
 
-      clearCart: () => set({ items: [] }),//limpiar el carro//
+      clearCart: () => set({ items: [] }), //limpiar el carro//
 
       // Drawer state para que el carro funcione como off canvas
       isCartOpen: false,

@@ -3,17 +3,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  
 }
 
 body {
   font-family: "Poppins", system-ui, sans-serif;
-  background: linear-gradient(180deg,#7f00ff,#401a3c);
+  background: linear-gradient(180deg, #7f00ff, #401a3c);
   color: #f5f5f5;
   min-height: 100vh;
   overflow-x: hidden;
-  
- 
 }
 
 /* HEADER FIJO / NAVBAR */
@@ -88,7 +85,6 @@ body {
    HOME
 ========================================= */
 .home {
-  
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -96,7 +92,6 @@ body {
   justify-content: center;
   text-align: center;
   padding: 40px 20px;
-
 }
 
 .Tittle {
@@ -130,11 +125,11 @@ body {
 
 /*products*/
 
-.products-page{
+.products-page {
   padding: 60px 20px;
   color: #fff;
   min-height: 100vh;
-  background: linear-gradient(180deg,#7f00ff,#401a3c);
+  background: linear-gradient(180deg, #7f00ff, #401a3c);
 }
 
 .products-page h1 {
@@ -146,12 +141,12 @@ body {
   text-shadow: 0 0 10px #00ffff;
 }
 
-.category{
+.category {
   margin-bottom: 60px;
   animation: fadeIn 0.8 ease-in;
 }
 
-.category h2{
+.category h2 {
   color: #fff;
   margin-bottom: 15px;
   font-size: 2rem;
@@ -164,7 +159,7 @@ body {
   gap: 30px;
   overflow-x: auto;
   padding: 15px 10px 40px;
-  scroll-behavior:smooth;
+  scroll-behavior: smooth;
 }
 
 .scroll-container::-webkit-scrollbar {
@@ -180,7 +175,7 @@ body {
   background: rgba(255, 255, 255, 0.1);
 }
 /*carga y error datos*/
-.cargando-datos{
+.cargando-datos {
   font-size: 2rem;
   min-height: 100vh;
   display: flex;
@@ -192,7 +187,7 @@ body {
   padding: 40px 20px;
 }
 
-.error-datos{
+.error-datos {
   font-size: 2rem;
   min-height: 100vh;
   display: flex;
@@ -215,28 +210,27 @@ body {
   transition: transform 0.3s ease;
 }
 
-.product-card:hover{
+.product-card:hover {
   transform: scale(1.03);
   box-shadow: 0 6px 20px #402152;
 }
 
-.product-card img{
+.product-card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 10px;
-
 }
 
-.product-card h3{
+.product-card h3 {
   color: #00ccff;
   font-size: 1rem;
   text-wrap: wrap;
   margin: 5px 0;
 }
 
-.product-card p{
+.product-card p {
   height: 40px;
   text-wrap: wrap;
   font-size: 0.9rem;
@@ -246,7 +240,7 @@ body {
   overflow: hidden;
 }
 
-.product-card span{
+.product-card span {
   display: block;
   margin-top: 8px;
   margin-bottom: 10px;
@@ -255,31 +249,30 @@ body {
   text-shadow: 2px 2px 5px #21002c;
 }
 
-.product-card button{
+.product-card button {
   background: #9800fe;
   border: none;
   color: #fff;
-  padding: 8px 16px; 
+  padding: 8px 16px;
   box-shadow: 2px 2px 5px #21002c;
   font-weight: bold;
   cursor: pointer;
   border-radius: 8px;
   transition: all 0.3s ease-in;
-
 }
 
-.product-card button:hover{
+.product-card button:hover {
   transform: scale(1.04);
   background: #a35afd;
 }
 /*Cart off canvas*/
 
-.overlay{
+.overlay {
   position: fixed;
   inset: 0;
   background: #00000076;
   backdrop-filter: blur(3px);
-  z-index:900;
+  z-index: 900;
   animation: slide-in 0.3s ease-out forwards;
   overflow: hidden;
 }
@@ -295,10 +288,8 @@ body {
   }
 }
 
-
-
-.cart-drawer{
-  position:fixed;
+.cart-drawer {
+  position: fixed;
   right: 0;
   top: 0;
   font-size: 1rem;
@@ -314,30 +305,27 @@ body {
   z-index: 1000;
   overflow-y: auto;
   animation: fade-in 0.3s ease-out forwards;
-  
-
 }
 
-@keyframes fade-in{
-  from{
+@keyframes fade-in {
+  from {
     transform: translateX(100%);
-    opacity:0;
+    opacity: 0;
   }
-  to{
+  to {
     transform: translateX(0);
     opacity: 1;
   }
 }
 
-.cart-header{
+.cart-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 10px;
-  
 }
 
-.cart-header h3{
+.cart-header h3 {
   font-size: 1.3rem;
   color: #fbfbfb;
   text-shadow: 0 3px 7px #000000;
@@ -363,7 +351,7 @@ body {
 
 .cart-item {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   align-items: flex-start;
   gap: 15px;
   background: #15052e7a;
@@ -384,13 +372,12 @@ body {
   width: 80px;
   height: 80px;
   object-fit: cover;
-  border-radius: 8px ;
+  border-radius: 8px;
   flex-shrink: 0;
-  box-shadow:0 3px 5px #6b0afc;
-  
+  box-shadow: 0 3px 5px #6b0afc;
 }
 /*controles del carro*/
-.qty-controls{
+.qty-controls {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -398,7 +385,7 @@ body {
   min-width: 200px;
   flex-wrap: nowrap;
 }
-.qty-controls button{
+.qty-controls button {
   background: #7b00ff;
   color: #fff;
   border: 2px solid #0088ff;
@@ -408,31 +395,27 @@ body {
   font-size: 1rem;
   padding: 5px 10px;
   transition: transform 0.2s ease;
-  
 }
 
-.qty-controls button:hover{
+.qty-controls button:hover {
   background: #c847ff;
   transform: scale(1.03);
-
 }
 
-.qty-controls .remove{
+.qty-controls .remove {
   background: #ff0000;
   color: #fff;
   padding: 6px 10px;
   white-space: nowrap;
 }
 
-.qty-controls .remove:hover{
-
+.qty-controls .remove:hover {
   background: #7f2929;
   transform: scale(1.03);
-
 }
 /*footer del carro*/
 
-.btn-secondary{
+.btn-secondary {
   background: #ff0000;
   color: #fff;
   border: 2px solid #0088ff;
@@ -444,12 +427,12 @@ body {
   transition: transform 0.2s ease;
 }
 
-.btn-secondary:hover{
+.btn-secondary:hover {
   background: #7f2929;
   transform: scale(1.03);
 }
 
-.btn-primary{
+.btn-primary {
   background: #02b842;
   color: #fff;
   border: 2px solid #0088ff;
@@ -462,19 +445,18 @@ body {
   margin: 6px;
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
   background: #2d7f29;
   transform: scale(1.03);
 }
 
 .cart-footer {
-  
   padding: 15px 10px;
   background: #1904439c;
 }
 
-.total{
-   font-size: 1.2rem;
+.total {
+  font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 15px;
   color: #00ffff;
@@ -596,8 +578,7 @@ body {
 
 /*404 NotFound*/
 
-
-.err-seccion{
+.err-seccion {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -607,17 +588,16 @@ body {
   text-align: center;
   padding: 40px 20px;
   animation: fadeIn 0.6s ease-in-out;
-
 }
 
-.err{
-font-size: 3rem;
+.err {
+  font-size: 3rem;
   color: #00ffff;
   text-shadow: 0 0 15px #00ffff80, 0 0 25px #7f00ff80;
   margin-bottom: 15px;
 }
 
-.err-text{
+.err-text {
   font-size: 1.2rem;
   color: #ccc;
   margin-bottom: 25px;
@@ -644,7 +624,7 @@ font-size: 3rem;
 /*footer*/
 
 .footer {
- background-color: rgba(66, 11, 195, 0.6);
+  background-color: rgba(66, 11, 195, 0.6);
   backdrop-filter: blur(5px);
   color: #e0e0e0;
   text-align: center;
