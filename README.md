@@ -25,8 +25,8 @@ te aparecera este link que para abrilo deberas pulsar la tecla CTRL+Click izquie
 
 ### Backend (JSON Server)
 1.Navega a la carpeta: Usa cd nombre_del_proyecto para moverte a la carpeta ("cd Backend" seria para acceder a la carpeta Backend)
-3. Ejecuta npm install para instalar todas las librerías y paquetes que el proyecto necesita para funcionar. ("npm install" seria lo que debes escribir en la terminal)
-4. por ultimo ejecutamos el frontend con el comando "npm run dev"
+2. Ejecuta npm install para instalar todas las librerías y paquetes que el proyecto necesita para funcionar. ("npm install" seria lo que debes escribir en la terminal)
+3. por ultimo ejecutamos el Backend con el comando "npm run dev"
 
 una vez ya ejecutado podemos observar que los productos se han cargado correctamente al frontend y se puede empezar a hacer peticiones al Api
 aparte podes checar el json si clickeas en el link que te mostrara todos los productos de la lista con sus respectivas ordenes que le hagamos
